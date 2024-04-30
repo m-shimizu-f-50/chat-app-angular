@@ -46,4 +46,16 @@ export class AppComponent {
       this.comment = '';
     }
   }
+
+  updateComment(comment: Comment): void {
+    const { key, message } = comment;
+
+    if (typeof key === 'string') {
+      // keyがstring型であることを確認
+      this.commentsRef.update(key, { message });
+    } else {
+      console.error('Key is undefined or not a string.');
+      // 必要に応じて、ここでエラーハンドリングを行う
+    }
+  }
 }

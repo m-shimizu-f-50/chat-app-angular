@@ -34,8 +34,18 @@
                 class="form-control"
               ></textarea>
               <div class="edit-buttons">
-                <button class="btn btn-success btn-sm">保存</button>
-                <button class="btn btn-warning btn-sm">キャンセル</button>
+                <button
+                  class="btn btn-success btn-sm"
+                  (click)="updateComment(comment)"
+                >
+                  保存
+                </button>
+                <button
+                  class="btn btn-warning btn-sm"
+                  (click)="comment.isEdit = false"
+                >
+                  キャンセル
+                </button>
               </div>
             </ng-container>
           </div>
