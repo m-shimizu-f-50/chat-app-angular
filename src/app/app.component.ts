@@ -58,4 +58,8 @@ export class AppComponent {
       // 必要に応じて、ここでエラーハンドリングを行う
     }
   }
+
+  deleteComment(comment: Comment): void {
+    this.commentsRef.remove(comment.key);
+  }
 }
