@@ -23,10 +23,8 @@ export class AppComponent {
   commentsRef: AngularFireList<Comment>;
   currentUser = CURRENT_USER;
   comment = '';
-  item$: Observable<any>;
 
   constructor(private db: AngularFireDatabase) {
-    this.item$ = this.db.object('/item').valueChanges();
     this.commentsRef = db.list('/comments');
     this.comments$ = this.commentsRef.snapshotChanges().pipe(
       map((snapshots: SnapshotAction<Comment>[]) => {
