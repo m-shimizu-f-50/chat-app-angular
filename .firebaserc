@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-chat-4cb90": {
+      "hosting": {
+        "chat-app-angular": [
+          "angular-chat-4cb90"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-chat-4cb90"
+  }
+}
